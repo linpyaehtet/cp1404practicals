@@ -5,12 +5,15 @@ PRINT_RESULT_OPTION = 'P'
 SHOW_STAR_OPTION = 'S'
 QUIT_OPTION = 'Q'
 
+MAXIMUM_SCORE = 100
+MINIMUM_SCORE = 0
 EXCELLENT_THRESHOLD = 90
 PASSABLE_THRESHOLD = 50
 
 def main():
     print(MENU)
     choice = input("Please enter your option: ").upper()
+    score = 0
     while choice != QUIT_OPTION:
         if choice == GET_SCORE_OPTION:
             score = get_valid_score()
@@ -29,7 +32,7 @@ def main():
 
 def get_valid_score():
     score = float(input("Enter your score: "))
-    while score < 0 or score > 100:
+    while score < MINIMUM_SCORE or score > MAXIMUM_SCORE:
         print("Invalid score")
         score = float(input("Enter your score: "))
     return score
@@ -45,7 +48,7 @@ def determine_result(score):
 
 
 def display_asterisks(score):
-    print('*' * len(score))
+    print('*' * score)
 
 
 main()
