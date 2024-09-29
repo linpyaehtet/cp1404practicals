@@ -20,3 +20,12 @@ def main():
         choice = input("Please enter your option: ")
 
 
+def get_valid_score():
+    score = float(input("Enter your score: "))
+    while score < 0 or score > 100:
+        print("Invalid score")
+        score = float(input("Enter your score: "))
+    return score
+
+
+main()
