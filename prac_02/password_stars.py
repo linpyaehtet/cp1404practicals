@@ -7,10 +7,15 @@ display '*' * length of password
 MINIMUM_LENGTH = 8
 
 def main():
+    password = get_password()
+    print('*' * len(password))
+
+
+def get_password():
     password = input(f"Enter password ({MINIMUM_LENGTH} characters or more): ")
     while len(password) < MINIMUM_LENGTH:
         password = input(f"Enter password ({MINIMUM_LENGTH} characters or more): ")
-    print('*' * len(password))
+    return password
 
 
 main()
