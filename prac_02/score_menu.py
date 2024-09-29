@@ -32,6 +32,7 @@ def main():
 
 
 def get_valid_score():
+    """Get valid score"""
     score = float(input("Enter your score: "))
     while score < MINIMUM_SCORE or score > MAXIMUM_SCORE:
         print("Invalid score")
@@ -40,6 +41,7 @@ def get_valid_score():
 
 
 def determine_result(score):
+    """Determine result based on score"""
     if score >= EXCELLENT_THRESHOLD:
         return "Excellent"
     elif score >= PASSABLE_THRESHOLD:
@@ -49,6 +51,7 @@ def determine_result(score):
 
 
 def display_asterisks(score):
+    """Display as many stars as the score"""
     print('*' * int(score))
 
 

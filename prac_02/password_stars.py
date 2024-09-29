@@ -12,10 +12,12 @@ def main():
 
 
 def display_asterisks(password):
+    """Display stars according to the length of password"""
     print('*' * len(password))
 
 
 def get_password():
+    """Get valid password"""
     password = input(f"Enter password ({MINIMUM_LENGTH} characters or more): ")
     while len(password) < MINIMUM_LENGTH:
         password = input(f"Enter password ({MINIMUM_LENGTH} characters or more): ")
