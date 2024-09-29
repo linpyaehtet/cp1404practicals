@@ -28,6 +28,7 @@ def main():
             print("Invalid option")
         print(MENU)
         choice = input("Please enter your option: ").upper()
+    print("Farewell")
 
 
 def get_valid_score():
