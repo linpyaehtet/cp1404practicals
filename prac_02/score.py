@@ -3,7 +3,9 @@ CP1404/CP5632 - Practical
 Broken program to determine score status
 """
 
-# TODO: Fix this!
+def main():
+    score = float(input("Enter score: "))
+    print(determine_result(score))
 
 score = float(input("Enter score: "))
 if score < 0 or score > 100:
