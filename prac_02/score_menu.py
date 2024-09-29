@@ -10,7 +10,7 @@ PASSABLE_THRESHOLD = 50
 
 def main():
     print(MENU)
-    choice = input("Please enter your option: ")
+    choice = input("Please enter your option: ").upper()
     while choice != QUIT_OPTION:
         if choice == GET_SCORE_OPTION:
             score = get_valid_score()
@@ -19,12 +19,12 @@ def main():
             print(determine_result(score))
             print()
         elif choice == SHOW_STAR_OPTION:
-            display_asterisks()
+            display_asterisks(score)
             print()
         else:
             print("Invalid option")
         print(MENU)
-        choice = input("Please enter your option: ")
+        choice = input("Please enter your option: ").upper()
 
 
 def get_valid_score():
@@ -42,6 +42,10 @@ def determine_result(score):
         return "Passable"
     else:
         return "Bad"
+
+
+def display_asterisks(score):
+    print('*' * len(score))
 
 
 main()
