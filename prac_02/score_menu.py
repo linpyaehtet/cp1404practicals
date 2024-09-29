@@ -48,7 +48,7 @@ def determine_result(score):
 
 
 def display_asterisks(score):
-    print('*' * score)
+    print('*' * int(score))
 
 
 main()
