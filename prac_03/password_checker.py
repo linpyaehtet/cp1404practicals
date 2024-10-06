@@ -43,6 +43,8 @@ def is_valid_password(password):
             number_of_digit += 1
         elif character in SPECIAL_CHARACTERS:
             number_of_special += 1
+    print(f"There is/are {number_of_lower} lowercase character(s) and {number_of_upper} uppercase character(s)")
+    print(f"There is/are {number_of_digit} digit(s) and {number_of_special} special character(s)")
 
     # TODO: if any of the 'normal' counts are zero, return False
     if number_of_lower == 0 or number_of_upper == 0 or number_of_digit == 0:
