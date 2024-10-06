@@ -2,7 +2,9 @@
 CP1404/CP5632 - Practical
 Answer the following questions:
 1. When will a ValueError occur?
+When the user input is anything other than integers
 2. When will a ZeroDivisionError occur?
+It will occur when the denominator is 0
 3. Could you change the code to avoid the possibility of a ZeroDivisionError?
 """
 
