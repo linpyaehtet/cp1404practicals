@@ -7,6 +7,7 @@ FILENAME = "subject_data.txt"
 
 
 def main():
+    """Load data and display output with correct parts"""
     data = load_data()
     print(data)
     display_subject_details(data)
