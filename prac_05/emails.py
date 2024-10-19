@@ -1,3 +1,9 @@
+"""
+Emails
+Estimate: 20 minutes
+Actual:   40 minutes
+"""
+
 email_to_name = {}
 
 def main():
