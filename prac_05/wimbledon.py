@@ -5,6 +5,7 @@ CHAMPION_COUNTRY_INDEX = 1
 champion_to_count = {}
 countries = set()
 
+
 def main():
     """Read csv file and print the results of winners and their countries"""
     entries = load_data()
