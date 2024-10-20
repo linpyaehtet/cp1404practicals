@@ -8,7 +8,7 @@ countries = set()
 def main():
     """Read csv file and print the results of winners and their countries"""
     entries = load_data()
-    print(entries)
+    process_entries(entries)
 
 
 def load_data():
@@ -17,6 +17,14 @@ def load_data():
         in_file.readline()
         entries = [line.strip().split(",") for line in in_file.readlines()]
     return entries
+
+
+def process_entries(entries):
+    """Assign keys and values to the dictionary and countries to the set"""
+    for entry in entries:
+        countries.add(entry[CHAMPION_COUNTRY_INDEX])
+        champion = entry[CHAMPION_INDEX]
+        champion_to_count[champion] = champion_to_count.get(champion, 0) + 1
 
 
 main()
