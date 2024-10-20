@@ -1,3 +1,10 @@
+
+"""
+Wimbledon
+Estimate: 30 minutes
+Actual:   55 minutes
+"""
+
 FILENAME = 'wimbledon.csv'
 CHAMPION_INDEX = 2
 CHAMPION_COUNTRY_INDEX = 1
