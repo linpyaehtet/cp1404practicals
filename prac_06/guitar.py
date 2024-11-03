@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 Practical - languages.
+CP1404/CP5632 Practical - guitar.
 Estimated time = 15 mins
 Actual time taken = 8 mins
 """

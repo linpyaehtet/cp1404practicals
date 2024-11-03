@@ -1,3 +1,8 @@
+"""
+CP1404/CP5632 Practical - languages.
+Estimated time = 10 mins
+Actual time taken = 8 mins
+"""
 from prac_06.guitar import Guitar
 first_guitar = Guitar("Gibson L-5 CES", 1922)
 second_guitar = Guitar("Another Guitar", 2013)
