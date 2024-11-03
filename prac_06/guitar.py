@@ -1,3 +1,8 @@
+"""
+CP1404/CP5632 Practical - languages.
+Estimated time = 15 mins
+Actual time taken = 8 mins
+"""
 CURRENT_YEAR = 2022
 VINTAGE_AGE_THRESHOLD = 50
 class Guitar:
