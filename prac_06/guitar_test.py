@@ -1,7 +1,7 @@
 """
-CP1404/CP5632 Practical - languages.
-Estimated time = 10 mins
-Actual time taken = 8 mins
+CP1404/CP5632 Practical - guitar_test.
+Estimated time = 5 mins
+Actual time taken = 15 mins
 """
 from prac_06.guitar import Guitar
 first_guitar = Guitar("Gibson L-5 CES", 1922)
