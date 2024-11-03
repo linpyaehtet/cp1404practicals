@@ -1,4 +1,4 @@
-CURRENT_YEAR = 2024
+CURRENT_YEAR = 2022
 VINTAGE_AGE_THRESHOLD = 50
 class Guitar:
     def __init__(self, name="", year=0, cost=0):
