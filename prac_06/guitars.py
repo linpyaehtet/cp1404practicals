@@ -1,3 +1,8 @@
+"""
+CP1404/CP5632 Practical - guitars.
+Estimated time = 10 mins
+Actual time taken = 15 mins
+"""
 from prac_06.guitar import Guitar
 
 guitars = []
