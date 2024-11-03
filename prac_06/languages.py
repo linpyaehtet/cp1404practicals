@@ -1,3 +1,9 @@
+"""
+CP1404/CP5632 Practical - languages.
+Estimated time = 10 mins
+Actual time taken = 8 mins
+"""
+
 from prac_06.programming_language import ProgrammingLanguage
 
 python = ProgrammingLanguage("Python", "Dynamic", True, 1991)
