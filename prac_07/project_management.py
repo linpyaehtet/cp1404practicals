@@ -23,7 +23,6 @@ projects = []
 def main():
     print(WELCOME_MESSAGE)
     load_projects()
-    projects.sort()
     print(MENU)
     choice = input(">>> ").upper()
     while choice != QUIT_OPTION:
@@ -45,7 +44,19 @@ def main():
         choice = input(">>> ").upper()
 
 
+def update_project():
+    count = 0
+    for project in projects:
+        print(f"{count} {project}")
+        count += 1
+    project_choice = int(input("Project choice: "))
+    print(projects[project_choice])
+    new_percentage = int(input("New Percentage: "))
+    projects[project_choice].completion = new_percentage
+
+
 def display_projects(projects):
+    projects.sort()
     incomplete_projects = []
     complete_projects = []
     for project in projects:
