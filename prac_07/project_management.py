@@ -11,6 +11,7 @@ MENU = """- (L)oad projects
 
 PROJECT_COMPLETION_PERCENTAGE = 100
 LOAD_OPTION = 'L'
+SAVE_OPTION = 'S'
 DISPLAY_OPTION = 'D'
 FILTER_OPTION = 'F'
 ADD_OPTION = 'A'
@@ -28,6 +29,8 @@ def main():
     while choice != QUIT_OPTION:
         if choice == LOAD_OPTION:
             load_projects()
+        elif choice == SAVE_OPTION:
+            save_projects()
         elif choice == DISPLAY_OPTION:
             display_projects(projects)
         elif choice == FILTER_OPTION:
