@@ -37,5 +37,9 @@ while user_choice != QUIT_OPTION:
     print(f"Bill to date: ${bill_to_date:.2f}")
     print(MENU)
     user_choice = input(">>> ").upper()
+print(f"Total trip cost: ${bill_to_date:.2f}")
+print("Taxis are now:")
+for i, taxi in enumerate(taxis):
+    print(f"{i} - {taxi}")
 
 
