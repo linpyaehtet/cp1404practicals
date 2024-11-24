@@ -2,7 +2,7 @@ from prac_09.taxi import Taxi
 from prac_09.silver_service_taxi import SilverServiceTaxi
 
 taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
-MENU = "q)uit, c)hooose taxi, d)rive"
+MENU = "q)uit, c)hoose taxi, d)rive"
 QUIT_OPTION = 'Q'
 CHOOSE_OPTION = 'C'
 DRIVE_OPTION = 'D'
