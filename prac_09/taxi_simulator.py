@@ -23,12 +23,15 @@ while user_choice != QUIT_OPTION:
         except IndexError:
             print("Invalid taxi choice")
     elif user_choice == DRIVE_OPTION:
-        current_taxi.start_fare()
-        distance = int(input("Drive how far? "))
-        current_taxi.drive(distance)
-        trip_cost = current_taxi.get_fare()
-        print(f"Your {current_taxi.name} trip cost you ${trip_cost:.2f}")
-        bill_to_date += trip_cost
+        if current_taxi:
+            current_taxi.start_fare()
+            distance = int(input("Drive how far? "))
+            current_taxi.drive(distance)
+            trip_cost = current_taxi.get_fare()
+            print(f"Your {current_taxi.name} trip cost you ${trip_cost:.2f}")
+            bill_to_date += trip_cost
+        else:
+            print("You need to choose a taxi before you can drive")
     else:
         print("Invalid option")
     print(f"Bill to date: ${bill_to_date:.2f}")
