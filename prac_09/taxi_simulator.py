@@ -11,15 +11,13 @@ bill_to_date = 0
 
 
 def main():
-    global current_taxi
     print("Let's drive!")
     print(MENU)
     user_choice = input(">>> ").upper()
     while user_choice != QUIT_OPTION:
         if user_choice == CHOOSE_OPTION:
             print("Taxis available")
-            for i, taxi in enumerate(taxis):
-                print(f"{i} - {taxi}")
+            display_taxis()
             chosen_taxi_choice = int(input("Choose taxi: "))
             try:
                 current_taxi = taxis[chosen_taxi_choice]
@@ -42,6 +40,10 @@ def main():
         user_choice = input(">>> ").upper()
     print(f"Total trip cost: ${bill_to_date:.2f}")
     print("Taxis are now:")
+    display_taxis()
+
+
+def display_taxis():
     for i, taxi in enumerate(taxis):
         print(f"{i} - {taxi}")
 
