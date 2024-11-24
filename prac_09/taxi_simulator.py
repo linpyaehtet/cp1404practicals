@@ -45,6 +45,7 @@ def main():
 
 
 def display_taxis():
+    """Display the taxis starting from 0"""
     for i, taxi in enumerate(taxis):
         print(f"{i} - {taxi}")
 
