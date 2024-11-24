@@ -9,6 +9,7 @@ DRIVE_OPTION = 'D'
 
 
 def main():
+    """Taxi simulator program"""
     current_taxi = None
     bill_to_date = 0
     print("Let's drive!")
@@ -25,7 +26,9 @@ def main():
                 print("Invalid taxi choice")
         elif user_choice == DRIVE_OPTION:
             if current_taxi:
-                drive_taxi(current_taxi)
+                current_taxi.start_fare()
+                distance = float(input("Drive how far? "))
+                current_taxi.drive(distance)
                 trip_cost = current_taxi.get_fare()
                 print(f"Your {current_taxi.name} trip cost you ${trip_cost:.2f}")
                 bill_to_date += trip_cost
@@ -39,12 +42,6 @@ def main():
     print(f"Total trip cost: ${bill_to_date:.2f}")
     print("Taxis are now:")
     display_taxis()
-
-
-def drive_taxi(current_taxi):
-    current_taxi.start_fare()
-    distance = float(input("Drive how far? "))
-    current_taxi.drive(distance)
 
 
 def display_taxis():
