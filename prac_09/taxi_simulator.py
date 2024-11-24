@@ -9,37 +9,43 @@ CHOOSE_OPTION = 'C'
 DRIVE_OPTION = 'D'
 bill_to_date = 0
 
-print("Let's drive!")
-print(MENU)
-user_choice = input(">>> ").upper()
-while user_choice != QUIT_OPTION:
-    if user_choice == CHOOSE_OPTION:
-        print("Taxis available")
-        for i,taxi in enumerate(taxis):
-            print(f"{i} - {taxi}")
-        chosen_taxi_choice = int(input("Choose taxi: "))
-        try:
-            current_taxi = taxis[chosen_taxi_choice]
-        except IndexError:
-            print("Invalid taxi choice")
-    elif user_choice == DRIVE_OPTION:
-        if current_taxi:
-            current_taxi.start_fare()
-            distance = float(input("Drive how far? "))
-            current_taxi.drive(distance)
-            trip_cost = current_taxi.get_fare()
-            print(f"Your {current_taxi.name} trip cost you ${trip_cost:.2f}")
-            bill_to_date += trip_cost
-        else:
-            print("You need to choose a taxi before you can drive")
-    else:
-        print("Invalid option")
-    print(f"Bill to date: ${bill_to_date:.2f}")
+
+def main():
+    global current_taxi
+    print("Let's drive!")
     print(MENU)
     user_choice = input(">>> ").upper()
-print(f"Total trip cost: ${bill_to_date:.2f}")
-print("Taxis are now:")
-for i, taxi in enumerate(taxis):
-    print(f"{i} - {taxi}")
+    while user_choice != QUIT_OPTION:
+        if user_choice == CHOOSE_OPTION:
+            print("Taxis available")
+            for i, taxi in enumerate(taxis):
+                print(f"{i} - {taxi}")
+            chosen_taxi_choice = int(input("Choose taxi: "))
+            try:
+                current_taxi = taxis[chosen_taxi_choice]
+            except IndexError:
+                print("Invalid taxi choice")
+        elif user_choice == DRIVE_OPTION:
+            if current_taxi:
+                current_taxi.start_fare()
+                distance = float(input("Drive how far? "))
+                current_taxi.drive(distance)
+                trip_cost = current_taxi.get_fare()
+                print(f"Your {current_taxi.name} trip cost you ${trip_cost:.2f}")
+                bill_to_date += trip_cost
+            else:
+                print("You need to choose a taxi before you can drive")
+        else:
+            print("Invalid option")
+        print(f"Bill to date: ${bill_to_date:.2f}")
+        print(MENU)
+        user_choice = input(">>> ").upper()
+    print(f"Total trip cost: ${bill_to_date:.2f}")
+    print("Taxis are now:")
+    for i, taxi in enumerate(taxis):
+        print(f"{i} - {taxi}")
+
+
+main()
 
 
