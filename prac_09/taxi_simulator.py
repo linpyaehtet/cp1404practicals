@@ -25,7 +25,7 @@ while user_choice != QUIT_OPTION:
     elif user_choice == DRIVE_OPTION:
         if current_taxi:
             current_taxi.start_fare()
-            distance = int(input("Drive how far? "))
+            distance = float(input("Drive how far? "))
             current_taxi.drive(distance)
             trip_cost = current_taxi.get_fare()
             print(f"Your {current_taxi.name} trip cost you ${trip_cost:.2f}")
