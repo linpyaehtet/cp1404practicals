@@ -49,13 +49,28 @@ def run_tests():
     car = Car()
     assert car.fuel == 0
 
+
+def phrase_to_sentence(phrase):
+    """
+    Determine if the word is as long or longer than the length passed in
+    >>> phrase_to_sentence('hello')
+    'Hello.'
+    >>> phrase_to_sentence("It is an ex parrot.")
+    'It is an ex parrot.'
+    >>> phrase_to_sentence("I love python")
+    'I love python.'
+    """
+    sentence = phrase.capitalize()
+    if sentence[-1] != ".":
+        sentence = f"{sentence}."
+    return sentence
+
+
 run_tests()
 
-# TODO: 3. Uncomment the following line and run the doctests
 # (PyCharm may see your >>> doctest comments and run doctests anyway.)
 doctest.testmod()
 
-# TODO: 4. Fix the failing is_long_word function
 # (Don't change the tests, change the function!)
 
 # TODO: 5. Write and test a function to format a phrase as a sentence,
